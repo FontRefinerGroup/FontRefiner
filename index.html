@@ -74,11 +74,11 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  <title>FontRefiner | Academic Research</title>
   
   <!-- Favicon and App Icons -->
-  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+  <link rel="icon" type="image/x-icon" href="static/images/logo.svg">
+  <link rel="apple-touch-icon" href="static/images/logo.svg">
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
@@ -186,53 +186,6 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- More Works Dropdown -->
-  <div class="more-works-container">
-    <button class="more-works-btn" onclick="toggleMoreWorks()" title="View More Works from Our Lab">
-      <i class="fas fa-flask"></i>
-      More Works
-      <i class="fas fa-chevron-down dropdown-arrow"></i>
-    </button>
-    <div class="more-works-dropdown" id="moreWorksDropdown">
-      <div class="dropdown-header">
-        <h4>More Works from Our Lab</h4>
-        <button class="close-btn" onclick="toggleMoreWorks()">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      <div class="works-list">
-        <!-- TODO: Replace with your lab's related works -->
-        <a href="https://arxiv.org/abs/PAPER_ID_1" class="work-item" target="_blank">
-          <div class="work-info">
-            <!-- TODO: Replace with actual paper title -->
-            <h5>Paper Title 1</h5>
-            <!-- TODO: Replace with brief description -->
-            <p>Brief description of the work and its main contribution.</p>
-            <!-- TODO: Replace with venue and year -->
-            <span class="work-venue">Conference/Journal 2024</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <!-- TODO: Add more related works or remove extra items -->
-        <a href="https://arxiv.org/abs/PAPER_ID_2" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 2</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-        <a href="https://arxiv.org/abs/PAPER_ID_3" class="work-item" target="_blank">
-          <div class="work-info">
-            <h5>Paper Title 3</h5>
-            <p>Brief description of the work and its main contribution.</p>
-            <span class="work-venue">Conference/Journal 2023</span>
-          </div>
-          <i class="fas fa-external-link-alt"></i>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <main id="main-content">
   <section class="hero">
@@ -241,7 +194,8 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <!-- TODO: Replace with your paper title -->
-            <h1 class="title is-1 publication-title">Academic Project Page</h1>
+            <h1 class="title is-1 publication-title">FontRefiner: Learning to Rewrite Scalable Vector Graphics Code via
+              MLLMs for Glyph Topology Regularization</h1>
             <div class="is-size-5 publication-authors">
               <!-- TODO: Replace with your paper authors and their personal links -->
               <span class="author-block">
@@ -312,141 +266,362 @@
     </div>
   </div>
 </section>
-
-
-<!-- Teaser video-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
+      <div class="content has-text-centered">
+          <img src="static/images/gif1.gif" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        描述1
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/gif2.gif" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
+      <h2 class="subtitle has-text-centered">
+        描述2
+      </h2>
+    </div>
+  </div>
+</section>
 <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            The complex topology and aesthetic properties of Chinese characters confer both substantial artistic freedom and engineering challenges in typeface design. In modern font production, manual drafting and automated tools often introduce severe geometric redundancy to closely match visual targets. This not only increases storage and rendering overhead, but also impedes downstream editing due to topological disorder. To address font curve optimization, we propose FontRefiner, a multimodal large model for Bézier curve sparsification of Chinese glyphs. FontRefiner supports two complementary glyph refinement paradigms, few shot reference guided refinement and zero shot universal refinement, and enables end to end glyph image vectorization and reconstruction. To effectively integrate the refinement task into an MLLM, we parameterize vector glyphs as SVG XML and elevate the task from local geometric fitting to structured code rewriting, allowing the model to learn designer decision priors. To overcome the multi template context bottleneck, we transform SVG text into visual signals and leverage the encoder’s semantic compression to produce extremely low dimensional dense representations. Architecturally, we adopt a dynamic resolution vision encoder with a hybrid attention mechanism, and inject hierarchical visual features into the language decoder via multi scale feature projection to mitigate geometric information degradation in autoregressive generation. To advance this line of research, we build CFRefiner 2M, a dataset of 300 fonts with two million non canonical to canonical glyph pairs. To our knowledge, this is the first work focused on Bézier curve sparsification and structural refinement for Chinese glyphs. With a three stage progressive training strategy, FontRefiner achieves state of the art performance and shows strong potential for integration into professional Chinese typeface design workflows.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End paper abstract -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Model Architecture</h2>
+        <div class="content has-text-centered">
+          <img src="static/images/模块图.jpg" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
+        <div class="content has-text-justified">
+          <p>
+            <b>Overview of FontRefiner.</b>
+            We encode Bezier-based glyphs into SVG XML as an intermediate modality bridging visual and topological semantics, enabling precise defect localization within the MLLM framework. To mitigate the sequence overhead introduced by multiple reference templates, we employ SVG optical compression to significantly reduce token length. The model flexibly supports both few-shot template-referenced and non-referenced universal modes, utilizing sequence concatenation ($\|$) to seamlessly toggle between these configurations.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background-color: #F8FAFC; padding: 3rem 0;">
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">CFDefect-2M Datasets</h2>
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/CFRefiner_BarChart_Pretty.png" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
+    </div>
+  </div>
+</section>
+</div>
 
 
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
+<br>
+<h2 class="title is-3 has-text-centered">Experiment</h2>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/e5.png" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
       <h2 class="subtitle has-text-centered">
-        Fourth image description.
+        Visualization of vector refinement analysis on manually created
+pseudo-characters. Even when the input character is a linguistically nonexistent pseudo-glyph, the model still exhibits strong structural generalization
+ability.
       </h2>
     </div>
   </div>
-</div>
-</div>
 </section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/e6.png" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
         </div>
-      </div>
+      <h2 class="subtitle has-text-centered">
+        Visualization of reference-template sensitivity analysis. When partial
+discrepancies exist between the reference characters and the input character,
+the model demonstrates robustness to the reference templates.
+      </h2>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
-
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/e7.png" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
         </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
+      <h2 class="subtitle has-text-centered">
+        Experiments on complex calligraphic and artistic typefaces show that FontRefiner can preserve the visual aesthetics of highly variant glyphs while
+reconstructing geometrically compact and topologically optimal structures.
+      </h2>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/e8.png" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
+      <h2 class="subtitle has-text-centered">
+        Visualization of stroke-level unordered topology perception. The original reference characters are decomposed into independent stroke paths and
+randomly permuted, thereby disrupting their global structural information. Despite the reference templates degenerating into a collection of disordered
+stroke fragments, FontRefiner can still effectively exploit these unordered fragments as geometric cues to guide the reconstruction of non-canonical glyphs.
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/e9.png" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
+      <h2 class="subtitle has-text-centered">
+        Vector refinement on glyphs synthesized by few-shot font generation methods. The input images are raster glyphs produced by a few-shot font
+generation model and exhibit unsmooth contours. While preserving the original glyph structure and style, FontRefiner reconstructs high-quality vector glyphs
+with smooth outlines and geometrically compact representations.
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/e10.png" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
+      <h2 class="subtitle has-text-centered">
+        Qualitative evaluation of cross-lingual zero-shot generalization. Although FontRefiner is trained only on a Chinese-character dataset, it demonstrates
+strong generalization to unseen writing systems (Latin letters, Korean, and Japanese). The model learns language-agnostic vector design priors, enabling it to
+effectively handle character sets with diverse geometric properties.
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/e11.png" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
+      <h2 class="subtitle has-text-centered">
+        Zero-shot generalization results on vector icons. Although FontRefiner is trained only on Chinese glyph data, the implicit geometric priors it
+learns transfer effectively to general planar vector graphics. While substantially optimizing the topology, the rendered visual appearance remains strictly
+consistent.
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/e21.png" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
+      <h2 class="subtitle has-text-centered">
+        Qualitative experiment on vector glyph optimization based on disordered component references.
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/e22.png" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
+      <h2 class="subtitle has-text-centered">
+        Elimination of generative artifacts. While the input raster images contain floating noise produced by generation models, FontRefiner effectively filters
+out these non-semantic artifacts during reconstruction, producing clean and usable vector glyphs.
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/e23.png" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
+      <h2 class="subtitle has-text-centered">
+        Visual verification of radical consistency. For identical radicals appearing across different characters, FontRefiner generates geometrically consistent
+and standardized structures.
+      </h2>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="content has-text-centered">
+          <img src="static/images/e24.png" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
+        </div>
+      <h2 class="subtitle has-text-centered">
+        Qualitative results of structural defect restoration. FontRefiner successfully identifies and corrects these topological defects, restoring the glyphs to
+their canonical forms based on learned structural priors.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<!-- Teaser video-->
+<!--<section class="hero teaser">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="hero-body">-->
+<!--      &lt;!&ndash; TODO: Replace with your teaser video &ndash;&gt;-->
+<!--      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">-->
+<!--        &lt;!&ndash; TODO: Add your video file path here &ndash;&gt;-->
+<!--        <source src="static/videos/banner_video.mp4" type="video/mp4">-->
+<!--      </video>-->
+<!--      &lt;!&ndash; TODO: Replace with your video description &ndash;&gt;-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. -->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!-- End teaser video -->
+
+<!--&lt;!&ndash; Paper abstract &ndash;&gt;-->
+<!--<section class="section hero is-light">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-four-fifths">-->
+<!--        <h2 class="title is-3">Abstract</h2>-->
+<!--        <div class="content has-text-justified">-->
+<!--          &lt;!&ndash; TODO: Replace with your paper abstract &ndash;&gt;-->
+<!--          <p>-->
+<!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End paper abstract &ndash;&gt;-->
+
+
+<!--&lt;!&ndash; Image carousel &ndash;&gt;-->
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--       <div class="item">-->
+<!--        &lt;!&ndash; TODO: Replace with your research result images &ndash;&gt;-->
+<!--        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>-->
+<!--        &lt;!&ndash; TODO: Replace with description of this result &ndash;&gt;-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--          First image description.-->
+<!--        </h2>-->
+<!--      </div>-->
+<!--      <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--          Second image description.-->
+<!--        </h2>-->
+<!--      </div>-->
+<!--      <div class="item">-->
+<!--        &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>-->
+<!--        <h2 class="subtitle has-text-centered">-->
+<!--         Third image description.-->
+<!--       </h2>-->
+<!--     </div>-->
+<!--     <div class="item">-->
+<!--      &lt;!&ndash; Your image here &ndash;&gt;-->
+<!--      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>-->
+<!--      <h2 class="subtitle has-text-centered">-->
+<!--        Fourth image description.-->
+<!--      </h2>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End image carousel &ndash;&gt;-->
+
+
+
+
+<!--&lt;!&ndash; Youtube video &ndash;&gt;-->
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      &lt;!&ndash; Paper video. &ndash;&gt;-->
+<!--      <h2 class="title is-3">Video Presentation</h2>-->
+<!--      <div class="columns is-centered has-text-centered">-->
+<!--        <div class="column is-four-fifths">-->
+<!--          -->
+<!--          <div class="publication-video">-->
+<!--            &lt;!&ndash; TODO: Replace with your YouTube video ID &ndash;&gt;-->
+<!--            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End youtube video &ndash;&gt;-->
+
+
+<!--&lt;!&ndash; Video carousel &ndash;&gt;-->
+<!--<section class="hero is-small">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title is-3">Another Carousel</h2>-->
+<!--      <div id="results-carousel" class="carousel results-carousel">-->
+<!--        <div class="item item-video1">-->
+<!--          &lt;!&ndash; TODO: Add poster image for better preview &ndash;&gt;-->
+<!--          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel1.mp4" type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video2">-->
+<!--          &lt;!&ndash; TODO: Add poster image for better preview &ndash;&gt;-->
+<!--          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel2.mp4" type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--        <div class="item item-video3">-->
+<!--          &lt;!&ndash; TODO: Add poster image for better preview &ndash;&gt;-->
+<!--          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">-->
+<!--            &lt;!&ndash; Your video file here &ndash;&gt;-->
+<!--            <source src="static/videos/carousel3.mp4" type="video/mp4">-->
+<!--          </video>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<!--&lt;!&ndash; End video carousel &ndash;&gt;-->
 
 
 
@@ -454,41 +629,41 @@
 
 
 <!-- Paper poster -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
+<!--<section class="hero is-small is-light">-->
+<!--  <div class="hero-body">-->
+<!--    <div class="container">-->
+<!--      <h2 class="title">Poster</h2>-->
 
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
-      </div>
-    </div>
-  </section>
+<!--      &lt;!&ndash; TODO: Replace with your poster PDF &ndash;&gt;-->
+<!--      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">-->
+<!--          </iframe>-->
+<!--        -->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
 <!--End paper poster -->
 
 
 
 <!--BibTex citation -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <div class="bibtex-header">
-        <h2 class="title">BibTeX</h2>
-        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
-          <i class="fas fa-copy"></i>
-          <span class="copy-text">Copy</span>
-        </button>
-      </div>
-      <pre id="bibtex-code"><code>@article{YourPaperKey2024,
-  title={Your Paper Title Here},
-  author={First Author and Second Author and Third Author},
-  journal={Conference/Journal Name},
-  year={2024},
-  url={https://your-domain.com/your-project-page}
-}</code></pre>
-    </div>
-</section>
+<!--  <section class="section" id="BibTeX">-->
+<!--    <div class="container is-max-desktop content">-->
+<!--      <div class="bibtex-header">-->
+<!--        <h2 class="title">BibTeX</h2>-->
+<!--        <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">-->
+<!--          <i class="fas fa-copy"></i>-->
+<!--          <span class="copy-text">Copy</span>-->
+<!--        </button>-->
+<!--      </div>-->
+<!--      <pre id="bibtex-code"><code>@article{YourPaperKey2024,-->
+<!--  title={Your Paper Title Here},-->
+<!--  author={First Author and Second Author and Third Author},-->
+<!--  journal={Conference/Journal Name},-->
+<!--  year={2024},-->
+<!--  url={https://your-domain.com/your-project-page}-->
+<!--}</code></pre>-->
+<!--    </div>-->
+<!--</section>-->
 <!--End BibTex citation -->
 
 
@@ -516,5 +691,5 @@
 
     <!-- End of Statcounter Code -->
 
-  </body>
-  </html>
+</body>
+</html>
