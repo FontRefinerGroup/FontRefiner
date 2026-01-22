@@ -315,7 +315,8 @@
         <div class="content has-text-justified">
           <p>
             <b>Overview of FontRefiner.</b>
-            We encode Bezier-based glyphs into SVG XML as an intermediate modality bridging visual and topological semantics, enabling precise defect localization within the MLLM framework. To mitigate the sequence overhead introduced by multiple reference templates, we employ SVG optical compression to significantly reduce token length. The model flexibly supports both few-shot template-referenced and non-referenced universal modes, utilizing sequence concatenation ($\|$) to seamlessly toggle between these configurations.
+            The framework is designed with two complementary vector glyph optimization paradigms: Few-Shot Reference-Guided and
+Zero-Shot Universal. The symbol ∥ denotes sequence concatenation, which serves to support switching between these two modes.
           </p>
         </div>
       </div>
