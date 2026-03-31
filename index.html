@@ -266,6 +266,7 @@
     </div>
   </div>
 </section>
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -302,7 +303,7 @@
     </div>
   </div>
 </section>
-    <div style="background-color: #F8FAFC; padding: 3rem 0;">
+<div style="background-color: #F8FAFC; padding: 3rem 0;">
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -323,33 +324,57 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            The complex topology and aesthetic properties of Chinese characters confer both substantial artistic freedom and engineering challenges in typeface design. In modern font production, manual drafting and automated tools often introduce severe geometric redundancy to closely match visual targets. This not only increases storage and rendering overhead, but also impedes downstream editing due to topological disorder. To address font curve optimization, we propose FontRefiner, a multimodal large model for Bézier curve sparsification of Chinese glyphs. FontRefiner supports two complementary glyph refinement paradigms, few shot reference guided refinement and zero shot universal refinement, and enables end to end glyph image vectorization and reconstruction. To effectively integrate the refinement task into an MLLM, we parameterize vector glyphs as SVG XML and elevate the task from local geometric fitting to structured code rewriting, allowing the model to learn designer decision priors. To overcome the multi template context bottleneck, we transform SVG text into visual signals and leverage the encoder’s semantic compression to produce extremely low dimensional dense representations. Architecturally, we adopt a dynamic resolution vision encoder with a hybrid attention mechanism, and inject hierarchical visual features into the language decoder via multi scale feature projection to mitigate geometric information degradation in autoregressive generation. To advance this line of research, we build CFRefiner 2M, a dataset of 300 fonts with two million non canonical to canonical glyph pairs. To our knowledge, this is the first work focused on Bézier curve sparsification and structural refinement for Chinese glyphs. With a three stage progressive training strategy, FontRefiner achieves state of the art performance and shows strong potential for integration into professional Chinese typeface design workflows.
+            The intricate topological structure and aesthetic characteristics of Chinese characters endow typeface design with both exceptional artistic latitude and substantial engineering challenges. In modern font production, manual drafting and automated tools often introduce significant geometric redundancy in order to precisely approximate visual targets. This not only increases storage and rendering costs, but also hampers subsequent editing by designers dueto topological disorder. To address the need for font-curve optimization, this paper proposes FontRefiner, a multimodal large model for sparsifying Bézier curves in Chinese-character fonts. FontRefiner supports two complementary glyph-optimization paradigms-few-shot reference-guided and zero-shot universal-and provides end-to-end vectorized reconstruction from glyph images. To integrate the optimization task effectively into an MLLM, we parameterize vector glyphs as SVG XML code and elevate the task from local geometric fitting to structured code rewriting, enabling the model to learn designers' decision priors. To overcome the multi-template context bottleneck, we transform SVG text into visual signals and leverage the encoder's semantic compression capability to produce extremely low-dimensional dense representations. Architecturally, we adopt a dynamic-resolution visual encoder with a hybrid attention mechanism, and inject hierarchical visual features into the language decoder via multi-scale feature projections, thereby mitigating geometric information degradation during autoregressive generation. Furthermore, to address the two dominant failure modes in SVG generation, namely command errors and coordinate drift, we propose a task-aware head specialization strategy thatencourages different decoder attention heads to focus on topology compression or coordinate refinement. To advance research in this area, we construct CFRefiner-2M, a dataset comprising 300 fonts and 2 million "non-canonical–canonical" sample pairs. With a three-stage progressive training strategy, FontRefiner not only achieves state-of-the-art performance but also demonstrates strong potential for integration into professional Chinese typeface design workflows.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Model Architecture</h2>
-        <div class="content has-text-centered">
-          <img src="static/images/模块图.jpg" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>
-        </div>
-        <div class="content has-text-justified">
-          <p>
-            <b>Overview of FontRefiner.</b>
-            The framework is designed with two complementary vector glyph optimization paradigms: Few-Shot Reference-Guided and
-Zero-Shot Universal. The symbol ∥ denotes sequence concatenation, which serves to support switching between these two modes.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<!--<section class="section">-->
+<!--  <div class="container is-max-desktop">-->
+<!--    <div class="columns is-centered has-text-centered">-->
+<!--      <div class="column is-four-fifths">-->
+<!--        <h2 class="title is-3">Model Architecture</h2>-->
+<!--        <div class="content has-text-centered">-->
+<!--          <img src="static/images/模块图2.jpg" alt="FontRefiner Architecture" style="width: 100%; object-fit: contain;"/>-->
+<!--        </div>-->
+<!--        <div class="content has-text-justified">-->
+<!--          <p>-->
+<!--            <b>Overview of FontRefiner.</b>-->
+<!--            The framework is designed with two complementary vector glyph optimization paradigms: Few-Shot Reference-Guided and Zero-Shot Universal. The symbol ∥ denotes sequence concatenation, which serves to support switching between these two modes. The right panel presents the task-aware head specialization mechanism, which routes pooled decoder-head representations toward topology compression or coordinate refinement, improving both path compactness and geometric accuracy in autoregressive SVG generation.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+<section class="hero teaser">
+  <div class="container is-fullwidth"> <!-- 改成全宽 -->
 
+    <!-- 标题 -->
+    <h2 class="title is-3 has-text-centered">Model Architecture</h2>
+
+    <div class="hero-body">
+      <!-- 图片 -->
+      <div class="content has-text-centered">
+        <img src="static/images/模块图2.jpg"
+             alt="FontRefiner Architecture"
+             style="width: 90%; max-width: 1200px; height: auto; object-fit: contain;"/>
+      </div>
+
+      <!-- 图片下方文字说明 -->
+      <div class="content has-text-justified" style="max-width: 1200px; margin: 1rem auto;">
+        <p>
+          <b>Overview of FontRefiner.</b>
+          The framework is designed with two complementary vector glyph optimization paradigms: Few-Shot Reference-Guided and Zero-Shot Universal. The symbol ∥ denotes sequence concatenation, which serves to support switching between these two modes. The right panel presents the task-aware head specialization mechanism, which routes pooled decoder-head representations toward topology compression or coordinate refinement, improving both path compactness and geometric accuracy in autoregressive SVG generation.
+        </p>
+      </div>
+
+    </div> <!-- hero-body end -->
+
+  </div> <!-- container end -->
+</section>
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -449,6 +474,7 @@ Zero-Shot Universal. The symbol ∥ denotes sequence concatenation, which serves
 </div>
 </div>
 </section>
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <h2 class="title is-3 has-text-centered">CFRefiner-2M Datasets</h2>
@@ -459,7 +485,7 @@ Zero-Shot Universal. The symbol ∥ denotes sequence concatenation, which serves
     </div>
   </div>
 </section>
-  <div class="container is-max-desktop">
+<div class="container is-max-desktop">
     <h2 class="title ">Related Links</h2>
     <p>
       <a href="https://pan.baidu.com/s/1pQjT_vKQxR3JEHnPtCba7g?pwd=ndbh"><b>FontRefiner_TestSamples</b></a>: The FontRefiner test set comprising 100,000 samples.
